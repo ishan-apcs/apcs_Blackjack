@@ -139,6 +139,7 @@ public class Blackjack {
 
             if (reply.equals("no")) {
                 run = false;
+                System.out.println("That's too bad. Bye!");
             } else if (!reply.equals("yes")) {
                 exit();
             }
