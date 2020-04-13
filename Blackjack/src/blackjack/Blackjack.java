@@ -31,8 +31,14 @@ public class Blackjack {
         System.out.println("Hello there, and welcome to Blackjack!");
 
         while (run) {
-            System.out.println("\nHow much will you bet? Please respond with an integer value of dollars (USD).");
-            int bet = (int) Double.parseDouble(input.nextLine().replaceAll("[^.0123456789]", ""));
+            System.out.println("\nHow much will you bet? Please respond with an amount of dollars (USD).");
+            String betString = input.nextLine().replaceAll("[^.0123456789]", "");
+            
+            while (betString.equals("")) {
+                System.out.println("\nI'm sorry, that's not a valid number. Please respond with an amount of dollars (USD).");
+                betString = input.nextLine().replaceAll("[^.0123456789]", "");
+            }
+            int bet = (int) Double.parseDouble(betString);
             total -= bet;
 
             System.out.print("\nYou have bet $" + bet + ". ");
