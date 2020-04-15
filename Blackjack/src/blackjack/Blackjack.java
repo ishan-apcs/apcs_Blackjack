@@ -59,9 +59,8 @@ public class Blackjack {
             house = new Player();
 
             player.addCard(deck.getTopCard());
-            player.addCard(deck.getTopCard());
-
             house.addCard(deck.getTopCard());
+            player.addCard(deck.getTopCard());
             house.addCard(deck.getTopCard());
 
             String reply = "hit";
